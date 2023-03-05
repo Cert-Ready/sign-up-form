@@ -1,0 +1,236 @@
+/* Google Font
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+/* Custom Variables
+   ========================================================================== */
+:root {
+  /* font */
+  --font-headers: 'Bitter', serif;
+  --font-text: 'Raleway', sans-serif;
+
+  /* size */
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 1rem;
+  --size-4: 5rem;
+  --size-fluid-1: clamp(1.5rem, 1vw, 1.8rem);
+
+  /* misc */
+  --pri-brd-rad: var(--size-1);
+
+  /* color */
+  --light-0: hsl(0, 0%, 100%);
+  --dark-0: hsl(216, 16%, 6%);
+  --pri-clr: hsl(222, 63%, 55%);
+  --pri-grad: radial-gradient(
+      circle at 67% 83%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 1%,
+      transparent 1%,
+      transparent 5%,
+      transparent 5%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 24% 80%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 27%,
+      transparent 27%,
+      transparent 63%,
+      transparent 63%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 23% 5%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 26%,
+      transparent 26%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 21% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 35%,
+      transparent 35%,
+      transparent 45%,
+      transparent 45%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 10% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 21%,
+      transparent 21%,
+      transparent 81%,
+      transparent 81%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 19% 61%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 20%,
+      transparent 20%,
+      transparent 61%,
+      transparent 61%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 13% 77%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 63%,
+      transparent 63%,
+      transparent 72%,
+      transparent 72%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 30% 93%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 33%,
+      transparent 33%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(22, 176, 207), rgb(103, 7, 215));
+}
+
+/* Core Body Defaults
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--pri-clr);
+  background-image: var(--pri-grad);
+  background-repeat: no-repeat;
+  color: var(--light-0);
+  font-family: var(--font-text);
+  text-align: center;
+  font-size: var(--size-fluid-1);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(var(--size-1));
+  border-radius: var(--pri-brd-rad);
+  padding: var(--size-3);
+}
+
+/* Style header
+   ========================================================================== */
+
+.hero {
+  font-family: var(--font-headers);
+}
+
+.cover-img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+/* Style form
+   ========================================================================== */
+
+form * {
+  margin-block: var(--size-3);
+}
+
+input {
+  background: transparent;
+  color: var(--light-0);
+  border: none;
+  border-bottom: 2px solid var(--light-0);
+}
+
+input::placeholder {
+  color: var(--light-0);
+}
+
+.pwd-error {
+  max-width: 350px;
+  font-size: var(--size-3);
+}
+
+/* Style buttons
+   ========================================================================== */
+.buttonV01 {
+  color: var(--light-0);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.buttonV02 {
+  padding: var(--size-2) var(--size-3);
+  background-color: var(--pri-clr);
+  border-radius: var(--pri-brd-rad);
+  border: 1px solid var(--light-0);
+}
+
+/* Animations
+   ========================================================================== */
+.horizontal-shake {
+  animation: shake 900ms ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Large Screens
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  .flex {
+    display: flex;
+  }
+
+  .flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper {
+    border: 2px solid var(--light-0);
+    margin-top: var(--size-4);
+  }
+
+  .cover-img {
+    width: 70%;
+  }
+
+  .hero {
+    text-align: left;
+  }
+
+  footer {
+    margin-top: var(--size-4);
+  }
+}

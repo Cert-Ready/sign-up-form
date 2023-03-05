@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <title>Sign-Up Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper flex">
+      <header class="flex-center">
+        <img
+          src="/img/undraw_social_sharing_re_pvmr.svg"
+          alt="a person sharing a post on social media"
+          class="cover-img"
+        />
+      </header>
+      <main>
+        <form method="post" id="form1">
+          <h1 class="hero">Sign up</h1>
+          <div>
+            <label for="fname">
+              <i class="fa-solid fa-user"></i>
+            </label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="First name"
+              required
+            />
+          </div>
+          <div>
+            <label for="lname">
+              <i class="fa-solid fa-user"></i>
+            </label>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Last name"
+              required
+            />
+          </div>
+          <div>
+            <label for="mail">
+              <i class="fa-solid fa-envelope"></i>
+            </label>
+            <input
+              type="email"
+              id="mail"
+              name="usermail"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div>
+            <label for="pwd">
+              <i class="fa-solid fa-lock"></i>
+            </label>
+            <input
+              type="password"
+              id="pwd"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <p id="password-error"></p>
+          </div>
+          <div>
+            <label for="paswd">
+              <i class="fa-solid fa-lock"></i>
+            </label>
+            <input
+              type="password"
+              id="paswd"
+              name="passwordvalidate"
+              placeholder="Confirm password"
+              required
+            />
+            <p class="pwd-error"></p>
+          </div>
+          <div>
+            <input
+              type="submit"
+              name="submit"
+              class="buttonV01 buttonV02"
+              value="Continue"
+            />
+          </div>
+        </form>
+        <p>Already have an account? <a href="#" class="buttonV01">Log in</a></p>
+      </main>
+    </div>
+    <footer>
+      <p>
+        <a href="https://github.com/Cert-Ready" class="buttonV01 buttonV02">
+          <i class="fa-brands fa-github"></i> Cert-Ready
+        </a>
+      </p>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
