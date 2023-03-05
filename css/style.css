@@ -14,11 +14,10 @@
   --size-1: 0.25rem;
   --size-2: 0.5rem;
   --size-3: 1rem;
-  --size-4: 5rem;
   --size-fluid-1: clamp(1.5rem, 1vw, 1.8rem);
 
   /* misc */
-  --pri-brd-rad: var(--size-1);
+  --pri-brd-rad: var(--size-2);
 
   /* color */
   --light-0: hsl(0, 0%, 100%);
@@ -115,69 +114,90 @@ body {
   background-repeat: no-repeat;
   color: var(--light-0);
   font-family: var(--font-text);
-  text-align: center;
   font-size: var(--size-fluid-1);
+  text-align: center;
 }
 
 .wrapper {
-  max-width: 1000px;
-  margin: auto;
+  backdrop-filter: blur(var(--size-2));
   background-color: rgba(255, 255, 255, 0.025);
-  backdrop-filter: blur(var(--size-1));
   border-radius: var(--pri-brd-rad);
+  margin: auto;
+  max-width: 1000px;
   padding: var(--size-3);
 }
 
 /* Style header
    ========================================================================== */
-
 .hero {
   font-family: var(--font-headers);
 }
 
 .cover-img {
   display: block;
-  width: 80%;
+  width: 40%;
   margin: auto;
 }
 
 /* Style form
    ========================================================================== */
-
-form * {
+.form-block {
   margin-block: var(--size-3);
 }
 
 input {
   background: transparent;
-  color: var(--light-0);
-  border: none;
   border-bottom: 2px solid var(--light-0);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: var(--light-0);
+  width: 80%;
 }
 
 input::placeholder {
   color: var(--light-0);
 }
 
-.pwd-error {
-  max-width: 350px;
+.error {
+  border-radius: var(--pri-brd-rad);
+  color: red;
   font-size: var(--size-3);
+  line-height: 2;
+  margin: var(--size-1) auto;
+  max-width: 400px;
+  min-height: 32px;
 }
 
 /* Style buttons
    ========================================================================== */
 .buttonV01 {
-  color: var(--light-0);
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.buttonV02 {
-  padding: var(--size-2) var(--size-3);
   background-color: var(--pri-clr);
   border-radius: var(--pri-brd-rad);
   border: 1px solid var(--light-0);
+  color: var(--light-0);
+  cursor: pointer;
+  display: block;
+  line-height: 1.5;
+  margin: var(--size-3) auto;
+  max-width: max-content;
+  padding-inline: var(--size-3);
+  text-decoration: none;
+}
+
+.buttonV01:hover,
+.buttonV01:focus {
+  background-color: var(--light-0);
+  border-radius: var(--pri-brd-rad);
+  color: var(--pri-clr);
+  outline: 1px solid var(--light-0);
+  transition: all 250ms ease-in-out;
+}
+
+* :focus {
+  outline: 5px solid var(--light-0);
+  outline-offset: 2px;
+  border-radius: var(--pri-brd-rad);
 }
 
 /* Animations
@@ -203,6 +223,7 @@ input::placeholder {
     transform: translateX(0);
   }
 }
+
 /* Large Screens
    ========================================================================== */
 @media screen and (min-width: 768px) {
@@ -219,18 +240,14 @@ input::placeholder {
 
   .wrapper {
     border: 2px solid var(--light-0);
-    margin-top: var(--size-4);
+    margin-top: var(--size-3);
   }
 
   .cover-img {
-    width: 70%;
+    width: 80%;
   }
 
-  .hero {
-    text-align: left;
-  }
-
-  footer {
-    margin-top: var(--size-4);
+  main {
+    flex-basis: 70%;
   }
 }

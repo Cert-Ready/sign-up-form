@@ -19,7 +19,7 @@
     <div class="wrapper flex">
       <header class="flex-center">
         <img
-          src="/img/undraw_social_sharing_re_pvmr.svg"
+          src="./img/undraw_social_sharing_re_pvmr.svg"
           alt="a person sharing a post on social media"
           class="cover-img"
         />
@@ -27,7 +27,7 @@
       <main>
         <form method="post" id="form1">
           <h1 class="hero">Sign up</h1>
-          <div>
+          <div class="form-block">
             <label for="fname">
               <i class="fa-solid fa-user"></i>
             </label>
@@ -38,8 +38,9 @@
               placeholder="First name"
               required
             />
+            <p class="error fname-error"></p>
           </div>
-          <div>
+          <div class="form-block">
             <label for="lname">
               <i class="fa-solid fa-user"></i>
             </label>
@@ -50,8 +51,9 @@
               placeholder="Last name"
               required
             />
+            <p class="error lname-error"></p>
           </div>
-          <div>
+          <div class="form-block">
             <label for="mail">
               <i class="fa-solid fa-envelope"></i>
             </label>
@@ -62,8 +64,9 @@
               placeholder="Email"
               required
             />
+            <p class="error email-error"></p>
           </div>
-          <div>
+          <div class="form-block">
             <label for="pwd">
               <i class="fa-solid fa-lock"></i>
             </label>
@@ -74,36 +77,34 @@
               placeholder="Password"
               required
             />
-            <p id="password-error"></p>
+            <p class="error pwd-error"></p>
           </div>
-          <div>
-            <label for="paswd">
+          <div class="form-block">
+            <label for="validatepwd">
               <i class="fa-solid fa-lock"></i>
             </label>
             <input
               type="password"
-              id="paswd"
+              id="validatepwd"
               name="passwordvalidate"
               placeholder="Confirm password"
               required
             />
-            <p class="pwd-error"></p>
+            <p class="error validatepwd-error"></p>
           </div>
           <div>
-            <input
-              type="submit"
-              name="submit"
-              class="buttonV01 buttonV02"
-              value="Continue"
-            />
+            <button type="submit" class="buttonV01">Continue</button>
           </div>
         </form>
-        <p>Already have an account? <a href="#" class="buttonV01">Log in</a></p>
+        <p>
+          Already have an account?
+          <a href="#" class="buttonV01">Log in</a>
+        </p>
       </main>
     </div>
     <footer>
       <p>
-        <a href="https://github.com/Cert-Ready" class="buttonV01 buttonV02">
+        <a href="https://github.com/Cert-Ready" class="buttonV01">
           <i class="fa-brands fa-github"></i> Cert-Ready
         </a>
       </p>
